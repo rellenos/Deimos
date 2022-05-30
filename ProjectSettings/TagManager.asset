@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - PlayerInteractionZone
+  - Lava
+  - Bullet
+  - RedBox
+  - RedButton
+  - GreenBox
+  - GreenButton
+  - BlueBox
+  - BlueButton
+  - FrontWall
+  - BackWall
+  - Punch
+  - BulletEnemy
+  - Checkpoint
+  - Dialogue
+  - DialogueStart
+  - DialogueLab
+  - DialogueAntenna
+  - Tuto1
+  - Tuto2
+  - Tuto3
+  - Tuto4
+  - DialogueRedentor
+  - GM
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - grappleLayer
+  - Water
+  - UI
+  - UpperUI
+  - 
+  - PostProcessing
+  - Not in Reflection
+  - Wall
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
