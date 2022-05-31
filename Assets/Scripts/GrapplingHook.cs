@@ -75,6 +75,11 @@ public class GrapplingHook : MonoBehaviour
                 }
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            ShootHook();
+        } 
     }
 
     private void LateUpdate()
