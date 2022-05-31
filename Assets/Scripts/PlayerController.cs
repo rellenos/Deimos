@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
     [Header("UI")]
     public TextMeshProUGUI ammoDisplay;
     public Image healthBar;
+    [SerializeField] public Animator animDamage;
     public GameObject dialogueStart;
     public GameObject dialogueLab;
     public GameObject dialogueAntenna;
@@ -103,6 +104,7 @@ public class PlayerController : MonoBehaviour
 
         animAlythea = GameObject.Find("Alythea").GetComponent<Animator>();
         animIR = GameObject.Find("IR_67").GetComponent<Animator>();
+        animDamage = GameObject.Find("DamagePanel").GetComponent<Animator>();
 
         cameraTransform = Camera.main.transform;
 
@@ -383,6 +385,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Punch"))
         {
             currentHealth = currentHealth - damage;
+            animDamage.SetTrigger("dmg");
             //Debug.Log ("hit");
 
             if(currentHealth <= 0)
@@ -450,6 +453,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("BulletEnemy"))
         {
             currentHealth = currentHealth - damage;
+            animDamage.SetTrigger("dmg");
             //Debug.Log ("muerte");
 
             if(currentHealth <= 0)

@@ -21,7 +21,7 @@ public class Redentor : MonoBehaviour
    public GameObject target;
    public Animator ani;
    public Quaternion angle;
-   //public AudioSource deathSound;
+   public AudioClip deathSound;
    
 
    void Start()
@@ -113,13 +113,19 @@ public class Redentor : MonoBehaviour
         {
             currentHealth = currentHealth - damage;
             //Debug.Log ("muerte");
+        }
 
-            if(currentHealth <= 0)
+        if (other.gameObject.CompareTag("BulletEnemy"))
+        {
+            currentHealth = currentHealth - damage;
+            //Debug.Log ("muerte");
+        }
+
+        if(currentHealth <= 0)
             {
                 Global.isRedentorDead = true;
                 Death();
             }
-        }
     }
 
     void Death()
@@ -134,6 +140,7 @@ public class Redentor : MonoBehaviour
         yield return new WaitForSeconds(destroyDelay);
         Destroy(gameObject);
         GameObject explosion = (GameObject)Instantiate(deathExplosion, transform.position, transform.rotation);
+        AudioSource.PlayClipAtPoint(deathSound, transform.position);
         //deathSound.Play();
         Destroy(explosion, 2f);
     }

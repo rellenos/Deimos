@@ -25,6 +25,8 @@ public class GrapplingHook : MonoBehaviour
     private bool isShootingGrap;
     private Vector3 hookPoint;
 
+    public AudioClip hookSound;
+
     private void Awake()
     {
         grappleAction = playerInput.actions["Grappling"];
@@ -66,7 +68,6 @@ public class GrapplingHook : MonoBehaviour
                 playerBody.position = Vector3.Lerp(playerBody.position, hookPoint - offset, hookSpeed * Time.deltaTime);
                 if (Vector3.Distance(playerBody.position, hookPoint - offset) < 0.5f)
                 {
-
                     controllerChar.enabled = true;
                     Global.ISgrappling = false;
                     grapplingHook.SetParent(handPos);
@@ -88,9 +89,8 @@ public class GrapplingHook : MonoBehaviour
 
     private void ShootHook()
     {
-        if (Global.witchAvatarIsOn == 2 ) {
-
-
+        if (Global.witchAvatarIsOn == 2 )
+        {
             if (isShootingGrap || Global.ISgrappling) return;
 
             isShootingGrap = true;
@@ -99,6 +99,7 @@ public class GrapplingHook : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, maxGrappleDistance, grappleLayer))
             {
+                AudioSource.PlayClipAtPoint(hookSound, transform.position);
                 hookPoint = hit.point;
                 Global.ISgrappling = true;
                 grapplingHook.parent = null;

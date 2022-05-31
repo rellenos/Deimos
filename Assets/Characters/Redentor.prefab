@@ -567,6 +567,7 @@ MonoBehaviour:
   target: {fileID: 0}
   ani: {fileID: 1228661023919191158}
   angle: {x: 0, y: 0, z: 0, w: 0}
+  deathSound: {fileID: 8300000, guid: 625d8a034b9f42846b4d449516c19583, type: 3}
 --- !u!1 &2220532395310666436
 GameObject:
   m_ObjectHideFlags: 0

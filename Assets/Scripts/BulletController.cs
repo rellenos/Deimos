@@ -12,10 +12,13 @@ public class BulletController : MonoBehaviour
     public Vector3 target { get; set; }
     public bool hit { get; set; }
 
+    public AudioClip bulletSound;
+
     private void OnEnable()
     {
         //Destroy(gameObject, timeToDestroy);
         StartCoroutine(LateCall(timeToDestroy));
+        AudioSource.PlayClipAtPoint(bulletSound, transform.position);
     }
 
     void Update()
