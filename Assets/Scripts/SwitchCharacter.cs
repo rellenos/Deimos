@@ -12,6 +12,9 @@ public class SwitchCharacter : MonoBehaviour
     [SerializeField] public GameObject character1, character2, ScrpPick;
     public GameObject alytheaIMG;
     public GameObject irIMG;
+    public GameObject pistolIMG;
+    public GameObject hookIMG;
+    public GameObject ammoCont;
 
     [Header("Animator")]
     [SerializeField] Animator animAlythea;
@@ -72,6 +75,9 @@ public class SwitchCharacter : MonoBehaviour
                     character2.gameObject.SetActive(true);
                     alytheaIMG.SetActive(false);
                     irIMG.SetActive(true);  
+                    pistolIMG.SetActive(false);
+                    hookIMG.SetActive(true);
+                    ammoCont.SetActive(false);
                     //gameObject.transform.position = originalPos;
                     break;
 
@@ -86,7 +92,10 @@ public class SwitchCharacter : MonoBehaviour
                     character2.gameObject.SetActive(false);
                     //gameObject.transform.position = originalPos;
                     alytheaIMG.SetActive(true);
-                    irIMG.SetActive(false);  
+                    irIMG.SetActive(false);
+                    pistolIMG.SetActive(true);
+                    hookIMG.SetActive(false);  
+                    ammoCont.SetActive(true);
                     break;
             }
         }

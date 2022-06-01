@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6979189148067759093}
   - component: {fileID: 6951286697213797478}
   - component: {fileID: 6290536260297167057}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6831630440518549304}
   - component: {fileID: 6020945709094161583}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 4199411362702425210}
   - component: {fileID: -4772984198993412024}
   - component: {fileID: 2517916034308393634}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: BulletTurret
   m_TagString: BulletEnemy
   m_Icon: {fileID: 0}

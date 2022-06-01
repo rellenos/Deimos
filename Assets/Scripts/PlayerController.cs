@@ -466,7 +466,7 @@ public class PlayerController : MonoBehaviour
     void Death()
     {
         Global.isDead = true;
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     IEnumerator ReloadWait()

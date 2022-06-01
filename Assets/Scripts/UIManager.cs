@@ -12,7 +12,6 @@ public class UIManager : MonoBehaviour
     [Header("Pause")]
     public GameObject pausePanel;
     public GameObject optionsPanel;
-    public GameObject gameOverPanel;
     public GameObject ui;
 
     [Header("Bright")]
@@ -79,13 +78,6 @@ public class UIManager : MonoBehaviour
 
         if (pauseActive) {ui.SetActive(false);}
         else {ui.SetActive(true);}
-
-        if (Global.isDead)
-        {
-            Cursor.lockState = CursorLockMode.Confined;
-            //Time.timeScale = 0;
-            gameOverPanel.SetActive(true);
-        }
     }
 
     public void RestartGame()
